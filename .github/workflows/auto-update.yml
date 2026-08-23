@@ -1,0 +1,40 @@
+name: Auto Update Files
+
+on:
+  schedule:
+    - cron: "0 0 * * *" 
+  workflow_dispatch:     
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.11]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      - name: Install Requeriments
+        run: |
+          sudo apt-get install zip
+          pip install json5 httpx requests
+
+          
+      - name: Update file
+        run: |
+          python3 main.py
+        env:
+          URL_D: ${{ secrets.URL_D }}
+
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add update.json Shopdate.json 
+          git commit -m "chore: $(date -u) auto update files" || echo "No changes to commit"
+          git push
