@@ -23,6 +23,13 @@ headers_D = {
 url_D = os.environ.get('URL_D')
 res = s.get(url_D, headers=headers_D, verify=False)
 data = res.json()
+flattened_data = []
+
+for item in data:
+    if 'mstShop' in item and isinstance(item['mstShop'], dict):
+        flattened_data.append(item['mstShop'])
+    else:
+        flattened_data.append(item)
 
 with open("Shopdate.json", 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
+    json.dump(flattened_data, f, ensure_ascii=False, indent=2)
