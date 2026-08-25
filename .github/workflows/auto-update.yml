@@ -3,7 +3,7 @@ name: Auto Update Files
 on:
   schedule:
     - cron: "0 0 * * *"
-    - cron: "01 04 * * *"
+    - cron: "0 04 * * *"
   workflow_dispatch:     
 
 permissions:
