@@ -21,7 +21,6 @@ headers_D = {
 }
 
 url_D = os.environ.get('URL_D')
-print(url_D)
 res = s.get(url_D, headers=headers_D, verify=False)
 data = res.json()
 flattened_data = []
