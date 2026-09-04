@@ -4417,6 +4417,46 @@
     "freeShopCondMessage": "",
     "hideWarningMessageCondId": 0,
     "freeShopReleaseDate": 0,
+    "id": 14344,
+    "baseShopId": 14344,
+    "eventId": 0,
+    "slot": 0,
+    "flag": 2048,
+    "priority": 87,
+    "purchaseType": 1,
+    "setNum": 1,
+    "payType": 4,
+    "shopType": 2,
+    "limitNum": 15,
+    "defaultLv": 0,
+    "defaultLimitCount": 0,
+    "name": "[25 Million Downloads Limited Time] Summon Ticket",
+    "detail": "[25 Million Downloads]\nExchange for one Summon Ticket that can perform one Saint Quartz summon",
+    "infoMessage": "",
+    "warningMessage": "",
+    "imageId": 80637,
+    "bgImageId": 0,
+    "openedAt": 1788494400,
+    "closedAt": 1790913599
+  },
+  {
+    "itemIds": [
+      0
+    ],
+    "prices": [
+      20
+    ],
+    "targetIds": [
+      4001
+    ],
+    "script": {},
+    "anotherPayType": 0,
+    "anotherItemIds": [],
+    "useAnotherPayCommonReleaseId": 0,
+    "freeShopCondId": 0,
+    "freeShopCondMessage": "",
+    "hideWarningMessageCondId": 0,
+    "freeShopReleaseDate": 0,
     "id": 2500002,
     "baseShopId": 2500002,
     "eventId": 0,
